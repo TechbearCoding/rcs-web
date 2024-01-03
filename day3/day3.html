@@ -13,6 +13,11 @@
         <input type="text" id="input1" class="testInput">
         <button id="btn1" class="btn1" onClick="testFunction()">Klikšķini mani!</button>
     </div>
+
+    <div class="input-form">
+        <input type="number" id="inputNumber" class="testInput">
+        <button id="btn2" class="btn1" onClick="task1()">Krāsot!</button>
+    </div>
     
 
     <script>
@@ -20,6 +25,16 @@
             document.getElementById("btn1").style.backgroundColor = "red";
             let userInput = document.getElementById("input1").value;
             alert(userInput);
+        }
+
+        function task1() {
+            let userInput = document.getElementById("inputNumber");
+
+            if(userInput.value % 2 == 0){
+                userInput.style.backgroundColor = "green";
+            }else{
+                userInput.style.backgroundColor = "red";
+            }
         }
     </script>
 </body>
