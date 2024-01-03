@@ -18,9 +18,16 @@
         <input type="number" id="inputNumber" class="testInput">
         <button id="btn2" class="btn1" onClick="task1()">Krāsot!</button>
     </div>
-    
+
+    <p id="counter">0</p>
+    <button class="btn1" onClick="task2a()">Skaitīt!</button>
+    <p id="counter2">0</p>
+    <button class="btn1" onClick="task2b()">Skaitīt atkal!</button>
+    <button class="btn1" onClick="sample2()">Sadalīt tekstu</button>
 
     <script>
+        let count = 0;
+
         function testFunction() {
             document.getElementById("btn1").style.backgroundColor = "red";
             let userInput = document.getElementById("input1").value;
@@ -34,6 +41,32 @@
                 userInput.style.backgroundColor = "green";
             }else{
                 userInput.style.backgroundColor = "red";
+            }
+        }
+
+        function task2a() {
+            count++;
+            document.getElementById("counter").innerHTML = count;
+            alert("Tu esi klikšķinājis " + count + " reizes!");
+        }
+
+        function task2b() {
+            let counter = document.getElementById("counter2");
+            counter.innerHTML = parseInt(counter.innerHTML) + 1;
+            alert("Tu esi klikšķinājis " + counter.innerHTML + " reizes!");
+        }
+
+        function sample2(){
+            // const num = [1, 4, 7, 10, 15];
+            
+            // for(let i = 0; i < num.length; i++){
+            //     alert(num[i])
+            // }
+            let text = "1,4,7,10,15";
+            let arr = text.split(",");
+
+            for(let i = 0; i < arr.length; i++){
+                alert(arr[i])
             }
         }
     </script>
