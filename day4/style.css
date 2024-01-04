@@ -1,0 +1,23 @@
+.backgroundPicture{
+    background-image: url("https://media.giphy.com/media/3o7TKMt1VVNkHV2PaE/giphy.gif");
+    height: 40%;
+    width: 500px;
+}
+.backgroundGreen{
+    background-color: green;
+}
+.testAlignCenter{
+    text-align: center;
+    color: blue;
+}
+.testParagraph{
+    color: red;
+}
+
+.input-form{
+    padding-top: 3%;
+}
+.btn1{
+    background-color: green;
+    color: white;
+}
