@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common'
 import { FormsModule } from '@angular/forms';
 
+import { Student } from '../studentinterface';
+
+
 @Component({
   selector: 'app-string-list',
   standalone: true,
@@ -14,24 +17,7 @@ export class StringListComponent implements OnInit{
   index: number = -1;
   studentFirstname: string = "";
 
-  lst: Student[] = [
-    {
-      firstName: "Janis",
-      lastName: "Zalitis"
-    },
-    {
-      firstName: "Juris",
-      lastName: "Berzs"
-    },
-    {
-      firstName: "Karlis",
-      lastName: "Klava"
-    },
-    {
-      firstName: "Anna",
-      lastName: "Zalite"
-    }
-  ]
+  // lst: Student[]
 
   constructor(){
     console.log("aaa2");
@@ -51,7 +37,3 @@ export class StringListComponent implements OnInit{
 
 }
 
-export interface Student {
-  firstName: string,
-  lastName: string
-}
