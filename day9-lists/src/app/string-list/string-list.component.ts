@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common'
 import { FormsModule } from '@angular/forms';
 
 import { Student } from '../studentinterface';
-
+import { StudentService } from '../student.service';
 
 @Component({
   selector: 'app-string-list',
@@ -17,14 +17,18 @@ export class StringListComponent implements OnInit{
   index: number = -1;
   studentFirstname: string = "";
 
-  // lst: Student[]
+  lst: Student[] = [];
 
-  constructor(){
-    console.log("aaa2");
+  constructor(private studentService: StudentService){
+
   }
 
   ngOnInit(): void {
-    console.log("aaa1");
+    this.getStudents();
+  }
+
+  getStudents() : void{
+    this.lst = this.studentService.getStudents();
   }
 
   replaceName() : void{

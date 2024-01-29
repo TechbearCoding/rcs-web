@@ -27,7 +27,7 @@ export class StudentService {
 
   constructor() { }
 
-  getStudent() : Student[]{
+  getStudents() : Student[]{
     return this.lst;
   }
 }
